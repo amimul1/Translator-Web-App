@@ -1,0 +1,58 @@
+<!-- 
+    Author: Amimul Ehsan Zoha
+    File: index.html
+    Description:  The html file of a web app doing three different kinds of translation by using a server client 
+    interaction. It is a full stack application using html,css , javascript, express and node.js
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Translator</title>
+</head>
+
+<body>
+    <div id="headingDiv">
+        <h1 id="heading"> TRANSLATOR </h1>
+    </div>
+
+    <div id="fromLangBox">
+
+        <label for="fromLang"></label>
+        <div id="selectLeft">
+            <select name="fromLang" id="fromLang" onchange="translateWords()">
+                <option value="e">English</option>
+                <option value="s">Spanish</option>
+                <option value="g">German</option>
+            </select>
+        </div>
+
+        <div id="inputBox">   
+            <input type="text" id="userInput" oninput="translateWords()">
+        </div>
+    </div>
+    
+
+    <div id="toLangBox">
+        <label for="toLang"></label>
+        <div id="selectRight">
+
+            <select name="toLang" id="toLang" onchange="translateWords()">
+                <option value="e">English</option>
+                <option value="s">Spanish</option>
+                <option value="g">German</option>
+            </select>
+        
+        </div>
+        <div id="outputBox">
+            <input type="text" id="output" >
+        </div>
+    </div>
+
+    <script src="./client.js"></script>
+</body>
+
+</html>
